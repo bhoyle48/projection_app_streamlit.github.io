@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import time
 
 
 st.title('This is my first application')
@@ -17,6 +18,8 @@ for p in range(0,51):
             'N^3':  p**3
         }
     )
+       
+    time.sleep(.1)
 
 
 data = pd.DataFrame(d)
