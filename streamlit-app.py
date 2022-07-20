@@ -8,20 +8,18 @@ st.title('This is my first application')
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...')
 
-data = pd.DataFrame()
-
-for p in range(0,50):
-    temp = pd.DataFrame(
+d = []
+for p in range(0,51):
+    d.append(
         {
-            'Number': p,
+            'N': p,
             'N^2': p**2,
-            'N^3': p**3
+            'N^3':  p**3
         }
     )
 
-    data = pd.concat([data, temp])
 
-
+data = pd.DataFrame(d)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text('Loading data...done!')
 
