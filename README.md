@@ -1,2 +1,5 @@
-# streamlit-projection-app
-Streamlit App made for simple projection methods.
+# Streamlit Projection App
+
+This project is my first attempt at building a streamlit app.
+
+### Questions? Comments?
