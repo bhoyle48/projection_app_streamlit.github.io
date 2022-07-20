@@ -13,7 +13,7 @@ data_load_state = st.text('Loading data...')
 iris = datasets.load_iris()
 
 
-data = iris
+data = pd.DataFrame(iris)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text('Loading data...done!')
 
