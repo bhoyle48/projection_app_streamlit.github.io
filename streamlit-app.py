@@ -10,9 +10,11 @@ st.title('This is my first application')
 # Create a text element and let the reader know the data is loading.
 data_load_state = st.text('Loading data...')
 
-iris = pd.DataFrame(data=data.data, columns=data.feature_names)
+iris = datasets.load_iris()
 
-data = iris
+d = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+
+data = d
 # Notify the reader that the data was successfully loaded.
 data_load_state.text('Loading data...done!')
 
