@@ -1,4 +1,4 @@
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)][https://bhoyle48-streamlit-projection-app-streamlit-app-4bppx5.streamlitapp.com/]
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://bhoyle48-streamlit-projection-app-streamlit-app-4bppx5.streamlitapp.com/)
 
 # Streamlit Projection App
 
