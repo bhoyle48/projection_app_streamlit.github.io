@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#0073b9" # DONE - Ramsey Blue
+backgroundColor = "#f5f7f8" # DONE - Light Gray
+secondaryBackgroundColor = "#b6bec2" # DONE - Ramsey Gray
+textColor = "#1f2426" # DONE - Black
+font = "gibson"
