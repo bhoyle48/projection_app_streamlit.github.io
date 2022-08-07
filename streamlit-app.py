@@ -2,6 +2,10 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
+st.set_page_config(
+        page_title="Forecasting Time Series Data"
+)
+
 
 # Set sidebar contact info and about information
 st.sidebar.title("About")
