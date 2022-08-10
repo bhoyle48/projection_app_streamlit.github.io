@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
+
+html, body, [class*="css"]  {
+   font-family: 'Montserrat';
+}
+
+body{ /* Normal  */
+  font-size: 14px;
+  font-family: 'Montserrat';
+  }
+
+td {  /* Table  */
+  font-size: 12px;
+}
+
+h1 {
+    font-size:38px;
+    color: #003561 !important;
+    color:red !important
+    font-family: 'Montserrat';
+}
+
+h1 { /* Header 1 */
+  font-size: 30px;
+  color: #003561 !important;
+  font-family: 'Montserrat';
+}
+
+h2 { /* Header 2 */
+  font-size: 26px;
+  color: #00b2f6 !important;
+  font-family: 'Montserrat';
+}
+
+h3 { /* Header 3 */
+  font-size: 20px;
+  color: #69757a !important;
+  font-family: 'Montserrat';
+}
+
+h4 { /* Header 4 */
+  font-size: 20px;
+  color: #b6bec2 !important;
+  font-family: 'Montserrat';
+}
+
+code.r{ /* Code block */
+  font-size: 10px;
+}
+
+pre { /* Code block - determines code spacing between lines */
+    font-size: 12px;
+}
