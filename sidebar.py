@@ -13,8 +13,8 @@ def mysidebar():
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        Web App URL: <https://bhoyle48.github.io/streamlit-projection-app/> \n
-        GitHub repository: <https://github.com/bhoyle48/streamlit-projection-app>
+        Web App URL: <bhoyle48.github.io/forecasting> \n
+        GitHub repository: <github.com/bhoyle48/forecasting>
         """
     )
     
