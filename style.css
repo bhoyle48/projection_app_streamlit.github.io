@@ -1,4 +1,3 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300');
 
 html, body, [class*="css"]  {
@@ -52,5 +51,3 @@ code.r{ /* Code block */
 pre { /* Code block - determines code spacing between lines */
     font-size: 12px;
 }
-
-</style>
