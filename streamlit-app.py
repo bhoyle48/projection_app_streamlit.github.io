@@ -1,6 +1,11 @@
 ## IMPORT LIBRARIES
 import streamlit as st
+from sidebar import mysidebar
 
+
+## -------------------------------------------------------------------------
+##  PAGE CONFIGURATION & SETUP
+## -------------------------------------------------------------------------
 
 ## SET PAGE CONFIGURATION(S)
 st.set_page_config(layout="wide", page_title='Forecasting Time Series Data')
@@ -11,13 +16,11 @@ with open ("style.css" ) as css:
         st.write(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 ## SET SIDEBAR
-with open ("sidebar.py") as sb:
-        st.sidebar(sb.read())
-        
+mysidebar()
+
+
 ## -------------------------------------------------------------------------
-##
 ##  THIS IS THE MAIN PAGE
-##
 ## -------------------------------------------------------------------------
      
 # Cusomtize Main Page
