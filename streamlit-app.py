@@ -11,7 +11,7 @@ with open ("style.css" ) as css:
         st.write(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 ## SET SIDEBAR
-with open (sidebar.py) as sb:
+with open ("sidebar.py") as sb:
         st.sidebar(sb.read())
         
 ## -------------------------------------------------------------------------
