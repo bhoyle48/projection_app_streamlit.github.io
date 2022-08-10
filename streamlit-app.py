@@ -1,7 +1,6 @@
 import streamlit as st
 
 st.set_page_config(layout="wide")
-st.set_page_config(page_title="Forecasting Time Series Data")
 
 with open ("/style.css" ) as css:
         st.marktdown(f'<style>{css.read()}</style>', unsafe_allow_html=True
