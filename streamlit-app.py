@@ -1,29 +1,25 @@
+## IMPORT LIBRARIES
 import streamlit as st
 
-st.set_page_config(layout="wide")
 
+## SET PAGE CONFIGURATION(S)
+st.set_page_config(layout="wide", page_title='Forecasting Time Series Data')
+
+## GET STYLE GUIDES
 with open ("style.css" ) as css:
         st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
         st.write(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
-# Set sidebar contact info and about information
-st.sidebar.title("About")
-st.sidebar.info(
-    """
-    Web App URL: <https://bhoyle48.github.io/streamlit-projection-app/> \n
-    GitHub repository: <https://github.com/bhoyle48/streamlit-projection-app>
-    """
-)
-
-st.sidebar.title("Contact")
-st.sidebar.info(
-    """
-    Benjamin Hoyle          
-    [GitHub](https://github.com/bhoyle48) | [LinkedIn](https://www.linkedin.com/in/hoyle-benjamin/) | [Email](Mailto:benjamin.hoyle1598@gmail.com?)
-    """
-)
-
-
+## SET SIDEBAR
+with open (sidebar.py) as sb:
+        st.sidebar(sb.read())
+        
+## -------------------------------------------------------------------------
+##
+##  THIS IS THE MAIN PAGE
+##
+## -------------------------------------------------------------------------
+     
 # Cusomtize Main Page
 st.title('Forecasting Time Series Data') 
 
