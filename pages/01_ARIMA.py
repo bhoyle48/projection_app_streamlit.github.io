@@ -105,7 +105,7 @@ st.markdown('---')
 ##  ARIMA MODELING
 ## -------------------------------------------------------------------------
 
-var = st.slider('test', 1, 100)
-var2 = st.slider('test', 1, 100)
+var = st.slider('Number', 1, 100)
+var2 = st.slider('to the power of', 1, 100)
 
 print('Value: ', var*var2)
