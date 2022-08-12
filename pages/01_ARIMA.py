@@ -20,7 +20,7 @@ mysidebar()
 
 
 ## -------------------------------------------------------------------------
-##  THIS IS THE MAIN PAGE
+##  ARIMA BLOG CONTENT
 ## -------------------------------------------------------------------------
      
 # Cusomtize Main Page
@@ -100,3 +100,12 @@ with st.expander('Read More'):
             predictable patterns (i.e. tax filings, Christmas tree sales, snowfall')
                                           
 st.markdown('---')
+
+## -------------------------------------------------------------------------
+##  ARIMA MODELING
+## -------------------------------------------------------------------------
+
+var = st.slider('test', 1, 100)
+var2 = st.slider('test', 1, 100)
+
+print('Value: ', var*var2)
