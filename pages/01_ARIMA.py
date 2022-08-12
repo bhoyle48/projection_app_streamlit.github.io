@@ -27,13 +27,12 @@ mysidebar()
 st.title('Autoregressive Integrated Moving Average')
 
 st.write('An autoregressive integrated moving average, is a statistical model \
-         which uses time series data to help predict future values. For example, \
-        an ARIMA model might seek to predict a stock’s future price based \
-        on it past performance. ARIMA models are a form of regression \
-        analysis that gauges the strength of one dependent variable \
-        relative to other changing variables. The model’s goal is to project \
-        future values by examining the difference between values in the series \
-        instead of other independent features.')
+        which uses time series data to help predict future values. For example, \
+        an ARIMA model might seek to predict a stock’s future price based on it \
+        past performance. ARIMA models are a form of regression analysis that gauges \
+        the strength of one dependent variable relative to other changing variables. \
+        The model’s goal is to project future values by examining the difference \
+        between values in the series instead of other independent features.')
         
                 
 with st.expander('Read More'):        
