@@ -18,11 +18,11 @@ def mysidebar():
 #         """
 #     )
     
-    # Contact Information
-    st.sidebar.title("Contact")
-    st.sidebar.info(
-        """
-        Benjamin Hoyle          
-        [GitHub](https://github.com/bhoyle48) | [LinkedIn](https://www.linkedin.com/in/hoyle-benjamin/) | [Email](Mailto:benjamin.hoyle1598@gmail.com?)
-        """
-    )
+#     # Contact Information
+#     st.sidebar.title("Contact")
+#     st.sidebar.info(
+#         """
+#         Benjamin Hoyle          
+#         [GitHub](https://github.com/bhoyle48) | [LinkedIn](https://www.linkedin.com/in/hoyle-benjamin/) | [Email](Mailto:benjamin.hoyle1598@gmail.com?)
+#         """
+#     )
