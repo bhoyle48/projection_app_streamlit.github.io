@@ -50,8 +50,9 @@ with st.expander('Read More'):
     """
     
     st.markdown(markdown)
-         
+       
     
+    st.write('')   
     st.subheader('ARIMA Parameters')
     
     markdown = """
@@ -86,8 +87,8 @@ with st.expander('Read More'):
             series, which represents the disparity between prices \
             in consecutive periods.')
             
-     
-    st.header('ARIMA and Stationarity')
+    st.write('')
+    st.subheader('ARIMA and Stationarity')
     
     st.write('In an ARIMA model, the observations are difference in order to make \
              it stationary, or that shows constancy to the data over time. Most \
