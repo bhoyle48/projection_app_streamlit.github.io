@@ -10,13 +10,13 @@ def mysidebar():
     ## SET SIDEBAR DEFINITION
     
     # App About Information
-    st.sidebar.title("About")
+    /*st.sidebar.title("About")
     st.sidebar.info(
         """
         Web App URL: [bhoyle48.github.io/forecasting](https://bhoyle48.github.io/forecasting) \n
         GitHub repository: [github.com/bhoyle48/forecasting](https://github.com/bhoyle48/forecasting)
         """
-    )
+    )*/
     
     # Contact Information
     st.sidebar.title("Contact")
