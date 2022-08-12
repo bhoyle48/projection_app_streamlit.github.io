@@ -108,4 +108,4 @@ st.markdown('---')
 var = st.slider('Number', 1, 100)
 var2 = st.slider('to the power of', 1, 100)
 
-print('Value: ', var*var2)
+st.write(var, " to the power of ", var2, " equals: ", var**var2)
