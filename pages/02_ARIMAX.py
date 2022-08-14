@@ -58,6 +58,9 @@ with st.expander('Read More'):
     So what does this look like?
     """
     
+    st.markdown(markdown)
+       
+        
     st.write('')
     st.subheader('ARIMAX Parameters')    
     
