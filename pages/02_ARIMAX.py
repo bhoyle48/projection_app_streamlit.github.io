@@ -23,6 +23,10 @@ mysidebar()
 ##  ARIMAX BLOG CONTENT
 ## -------------------------------------------------------------------------
      
+## -------------------------------------------------------------------------
+##  ARIMAX BLOG CONTENT
+## -------------------------------------------------------------------------
+     
 # Cusomtize Main Page
 st.title('Autoregressive Integrated Moving Average with Exogenous Variables') 
 
@@ -65,13 +69,15 @@ with st.expander('Read More'):
     st.subheader('ARIMAX Parameters')    
     
     markdown = """
-    You'll notice the parameters, are really the same as the ARIMA model.
     - p: the number of lag observations in the model (i.e. lag order)
     - d: the number of times the raw observations are differenced (i.e. degree of differencing)
     - q: the size of the averaged window (i.e. order of moving average)
     """
            
     st.markdown(markdown)
+
+    st.write('')
+    st.write('&ensp;&emsp; So what does this look like?')
 
     formula = r'''
     $$
@@ -81,7 +87,7 @@ with st.expander('Read More'):
        
     st.write(formula)
         
-    st.write('Just like ARIMA models, we have the error terms (E), values (P), the \
+    st.write('Just like ARIMA models, we have the error terms (ϵ), values (P), the \
               constant (C), and the delta. However, you’ll see the inclusion of the \
               X and its coefficient, beta (β). Beta is a coefficient which will be estimated\
               based on the model selection and data and X is the exogenous variable(s) \
