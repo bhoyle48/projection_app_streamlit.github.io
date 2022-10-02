@@ -428,7 +428,7 @@ fig.add_scatter(x = df['Date'],  y=df['Metric'], mode='lines', name='Actual', ma
 fig.add_scatter(x = fpd['Date'], y=fpd['mean'], mode='lines',name='Projected', marker_color='#0079c2',
                         line = dict(width=4, dash='dash'))
 fig.add_scatter(x = yhat['Date'], y=yhat['yhat'], mode='lines', name='Test',
-                        line = dict(color='rgba(211, 211, 211, 0.15)', width = 2, dash='dot'))
+                        line = dict(color='rgb(0, 0, 0)', width = 2, dash='dot'))
 
 
 fig.add_scatter(x = fpd['Date'], y=fpd['upper'], mode='lines',name='Upper {} CI'.format(upper_conf),
