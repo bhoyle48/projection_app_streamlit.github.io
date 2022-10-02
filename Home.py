@@ -103,7 +103,7 @@ with form:
         else:
             df = pd.read_csv('sample-data/VTI.csv') 
             st.session_state.load_csv = df 
-            st.write(uploaded_file.name + " is loaded")
+            st.write("VTI.csv is loaded")
         
         ## Get Length of Dataset
         nrows = len(df)
