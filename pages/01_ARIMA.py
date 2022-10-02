@@ -780,7 +780,7 @@ for df1 in fpd:
                                   fillcolor = 'rgba(211, 211, 211, 0.15)',
                                   ))
 
-fig.update_layout(width=1100, height=400, title=metric_name, margin={'t':30}, title_x=0.5, showlegend=True)
+fig.update_layout(width=900, height=400, title=metric_name, margin={'t':30}, title_x=0.5, showlegend=True)
 st.plotly_chart(fig)
 
 
