@@ -63,7 +63,7 @@ from statsmodels.tsa.stattools import adfuller
 
 form = st.form(key='arima-params', clear_on_submit=False)
 
-with form:    
+with form:   
     
     ## REQUIRED INFORMATION
     rcol1, rcol2, rcol3 = st.columns([6, 2.9, 1.1])
@@ -75,7 +75,7 @@ with form:
         # If there is not a file uploaded
         if uploaded_file is not None:
             if 'load_csv' is st.session_state:
-                df = pd.read_csv('/Users/Benjamin/Desktop/VTI.csv')         # pd.read_csv('sample-data/BTC-USD.csv')             
+                df = pd.read_csv('sample-data/BTC-USD.csv')             
                 df = st.session_state.load_csv
                 st.write(uploaded_file.name + " is loaded")
             else:
@@ -83,7 +83,7 @@ with form:
                 st.session_state.load_csv = df
                 st.write(uploaded_file.name + " is loaded")
         else:
-            df = pd.read_csv('/Users/Benjamin/Desktop/VTI.csv') #pd.read_csv('sample-data/BTC-USD.csv') 
+            df = pd.read_csv('sample-data/BTC-USD.csv') 
             st.session_state.load_csv = df 
             st.write("BTC-USD.csv is loaded")
         
