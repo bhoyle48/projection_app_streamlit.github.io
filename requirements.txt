@@ -6,7 +6,6 @@ pandas
 scikit-learn
 plotly
 statsmodels
-itertools
 datetime
 math
 scipy
