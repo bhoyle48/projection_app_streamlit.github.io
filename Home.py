@@ -2,7 +2,6 @@
 import streamlit as st
 import os
 
-os.chdir('/Users/Benjamin/Documents/GitHub/forecasting') 
 from sidebar import mysidebar
 
 
