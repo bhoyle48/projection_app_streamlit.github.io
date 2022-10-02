@@ -78,6 +78,8 @@ font-size:px; font-family: 'Montserrat'; color: #FF9633;}
 ##  Form
 ## -------------------------------------------------------------------------      
 
+form = st.form(key='home-params', clear_on_submit=False)
+
 
 with form:    
     
