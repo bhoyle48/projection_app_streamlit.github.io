@@ -284,7 +284,7 @@ for p in ps:
 			
 
 
-my_bar.progresss(100)
+my_bar.progress(1)
 # Get the best model
 best_arima_model = ARIMA(endog = y_train, order = best_cfg).fit()
 
