@@ -74,8 +74,6 @@ st.markdown(""" <style> .font {
 font-size:px; font-family: 'Montserrat'; color: #FF9633;} 
 </style> """, unsafe_allow_html=True)
 
-figheader = st.markdown('<p class="font">file.columns[1]</p>', unsafe_allow_html=True)
-
 ## -------------------------------------------------------------------------
 ##  File Upload
 ## -------------------------------------------------------------------------      
