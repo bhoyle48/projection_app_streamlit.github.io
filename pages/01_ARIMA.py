@@ -75,7 +75,7 @@ with form:
         # If there is not a file uploaded
         if uploaded_file is not None:
             if 'load_csv' is st.session_state:
-                df = pd.read_csv('sample-data/BTC-USD.csv')             
+                df = pd.read_csv('/Users/Benjamin/Desktop/VTI.csv')         # pd.read_csv('sample-data/BTC-USD.csv')             
                 df = st.session_state.load_csv
                 st.write(uploaded_file.name + " is loaded")
             else:
@@ -83,7 +83,7 @@ with form:
                 st.session_state.load_csv = df
                 st.write(uploaded_file.name + " is loaded")
         else:
-            df = pd.read_csv('sample-data/BTC-USD.csv') 
+            df = pd.read_csv('/Users/Benjamin/Desktop/VTI.csv') #pd.read_csv('sample-data/BTC-USD.csv') 
             st.session_state.load_csv = df 
             st.write("BTC-USD.csv is loaded")
         
@@ -283,6 +283,8 @@ for p in ps:
             my_bar.progress(progress_point)
 			
 
+
+my_bar.progress(1)
 # Get the best model
 best_arima_model = ARIMA(endog = y_train, order = best_cfg).fit()
 
@@ -298,7 +300,7 @@ q = best_cfg[2]
 import scipy.stats as stat
 import numpy as np
 
-bam = ARIMA(endog = np.array(df['Metric']), dates=np.array(df.index), order = best_cfg)
+bam = ARIMA(endog = np.array(df['Metric']), order = best_cfg)
 
 bm = bam.fit()
 
