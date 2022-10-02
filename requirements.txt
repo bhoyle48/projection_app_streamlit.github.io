@@ -7,7 +7,6 @@ scikit-learn
 plotly
 statsmodels
 datetime
-math
-scipy
 dateutil
 tqdm
+scipy
