@@ -268,7 +268,7 @@ for p in ps:
                         
             predictions = list()
                   
-            model = ARIMA(endog = y_train.values, order = (p,d,q), enforce_stationarity=True).fit()
+            model = ARIMA(endog = y_train.values, order = (p,d,q)).fit()
 				
             yhat = model.forecast(steps = test_size)
                        
