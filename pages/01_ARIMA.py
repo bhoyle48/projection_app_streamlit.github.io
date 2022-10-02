@@ -93,7 +93,7 @@ with form:
     with rcol3:
         st.write('') # Added for alignment
         st.write('') # Added for alignment
-        date_type = st.selectbox('Set Period Type',('Day', 'Week', 'Month', 'Quarter', 'Year'),index = 0)
+        date_type = st.selectbox('Set Period Type',('Day', 'Week', 'Month', 'Quarter', 'Year'),index = 0, key='date_type')
     
     
     ## MODEL CRITIERA
