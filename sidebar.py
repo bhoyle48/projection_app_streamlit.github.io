@@ -9,7 +9,7 @@ def mysidebar():
     
     ## SET SIDEBAR DEFINITION
     
-#   # App About Information
+    # App About Information
     st.sidebar.title("About")
     st.sidebar.info(
         """
