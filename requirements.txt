@@ -5,3 +5,10 @@ matplotlib
 pandas
 scikit-learn
 plotly
+statsmodels
+itertools
+datetime
+math
+scipy
+dateutil
+tqdm
