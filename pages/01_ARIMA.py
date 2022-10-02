@@ -304,6 +304,10 @@ bam = ARIMA(endog = np.array(df['Metric']), order = best_cfg)
 
 bm = bam.fit()
 
+yhat = pd.DataFrame(bm.forecast(steps = test_size)).reset_index(drop=True)
+yhat['Date'] = X_test.reset_index(drop=True)
+yhat.columns = ['yhat', 'Date']
+
 sim = bm.simulate(nsimulations = n_periods_to_forecast, 
                    anchor='end', 
                    repetitions = simulations,
@@ -424,6 +428,9 @@ fig.add_scatter(x = df['Date'],  y=df['Metric'], mode='lines', name='Actual', ma
                         line = dict(width=4))
 fig.add_scatter(x = fpd['Date'], y=fpd['mean'], mode='lines',name='Projected', marker_color='#0079c2',
                         line = dict(width=4, dash='dash'))
+fig.add_scatter(x = yhat['Date'], y=yhat['yhat'], mode='lines', name='Test',
+                        line = dict(color='rgba(211, 211, 211, 0.15)', width = 2, dash='dot'))
+
 
 fig.add_scatter(x = fpd['Date'], y=fpd['upper'], mode='lines',name='Upper {} CI'.format(upper_conf),
                         line = dict(color='rgba(211, 211, 211, 0.15)', width = 2, dash='dot'))
