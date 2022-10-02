@@ -589,17 +589,20 @@ my_bar = st.progress(0)
 ## P
 if p == -1:
     ps = (0,1,2,4,6)
-else ps = range(p,p+1)
+else: 
+    ps = range(p,p+1)
 
 ## D
 if d == -1:
     ds = (0,1,2)
-else ds = range(d,d+1)
+else: 
+    ds = range(d,d+1)
 
 ## Q
 if q == -1:
     qs = (0,1,2)
-else qs = range(q,q+1)
+else:
+    qs = range(q,q+1)
 
 
 iterrations = (100 / (len(ps)*len(ds)*len(qs)))/100
