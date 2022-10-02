@@ -257,7 +257,7 @@ with sd1:
     
     obs = go.Figure(data=go.Scatter(x = df.index, y=decomposition.observed, 
                                     mode='lines', name='Trend', marker_color='#0079c2'), layout=plot_layout)
-    obs.update_layout(width=750, height=370, title='Actual Values ['+metric_name+']', margin={'t':30}, title_x=0.5, showlegend=False
+    obs.update_layout(width=600, height=370, title='Actual Values ['+metric_name+']', margin={'t':30}, title_x=0.5, showlegend=False
                       ,xaxis = {'showgrid': False} ,yaxis = {'showgrid': False})
     
     st.plotly_chart(obs)
@@ -532,7 +532,7 @@ with he1:
     
 with he2:
  
-    res.update_layout(width=665, height=350, title='Residuals Plot', margin={'t':45}, title_x=0.501, showlegend=False,font=dict(size=14)
+    res.update_layout(width=600, height=350, title='Residuals Plot', margin={'t':45}, title_x=0.501, showlegend=False,font=dict(size=14)
                       ,xaxis = {'showgrid': False} ,yaxis = {'showgrid': False})
     
     st.plotly_chart(res)
