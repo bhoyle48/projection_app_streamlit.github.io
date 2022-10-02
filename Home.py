@@ -1,6 +1,9 @@
 ## IMPORT LIBRARIES
 import streamlit as st
-from sidebar import mysidebar
+import os
+
+os.chdir('/Users/Benjamin/Documents/GitHub/forecasting') 
+# from sidebar import mysidebar
 
 
 ## -------------------------------------------------------------------------
@@ -16,7 +19,7 @@ with open ("style.css" ) as css:
         st.write(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 ## SET SIDEBAR
-mysidebar()
+# mysidebar()
 
 
 ## -------------------------------------------------------------------------
@@ -41,12 +44,9 @@ st.write('It would be impossible to provide exploration into all possible \
          forecasting methods. For that reason, this will focus on the most popular models.')
 
 markdown = """
-1. Autoregressive Integrated Moving Average (__ARIMA__) --> *In development*
-2. ARIMA with Exogenous Variables (__ARIMAX__) --> In development
-3. Seasonal Autoregressive Integrated Moving Average (__SARIMA__) --> *In development*
-4. SARIMA with Exogenous Variables (__SARIMAX__) --> *In development*
-5. __Holt-Winters__ --> *In development*
-6. __Holt-Winters with Exogoneous Variables__ --> *In development*
+1. Autoregressive Integrated Moving Average (__ARIMA__)
+2. Seasonal Autoregressive Integrated Moving Average (__SARIMA__) --> *In development*
+3. Holt-Winters (HWES) --> *In development*
 """
 
 st.markdown(markdown)
@@ -57,3 +57,59 @@ st.write('')
 st.write('This is an open-source project created with [Streamlit](https://streamlit.io) \
          and you are very welcome to contribute to the \
          [GitHub repository](https://github.com/bhoyle48/streamlit-projection-app).')
+
+st.markdown('---')
+
+## -------------------------------------------------------------------------
+##  Imports
+## ------------------------------------------------------------------------- 
+import pandas as pd
+import numpy as np
+
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+
+
+## -------------------------------------------------------------------------
+##  Functions
+## ------------------------------------------------------------------------- 
+
+st.markdown(""" <style> .font {
+font-size:px; font-family: 'Montserrat'; color: #FF9633;} 
+</style> """, unsafe_allow_html=True)
+
+figheader = st.markdown('<p class="font">file.columns[1]</p>', unsafe_allow_html=True)
+
+## -------------------------------------------------------------------------
+##  File Upload
+## -------------------------------------------------------------------------      
+
+# Add File Component
+uploaded_file = st.file_uploader("", type='csv')
+
+
+# If there is not a file uploaded
+if uploaded_file is not None:
+    if 'load_csv' is st.session_state:
+        df = pd.read_csv('/Users/Benjamin/Desktop/BTC-USD.csv')
+        df = st.session_state.load_csv
+        st.write(uploaded_file.name + " is loaded")
+    else:
+        df = pd.read_csv(uploaded_file)
+        st.session_state.load_csv = df
+        st.write(uploaded_file.name + " is loaded")
+else:
+    df = pd.read_csv('/Users/Benjamin/Desktop/BTC-USD.csv')
+    st.session_state.load_csv = df 
+    st.write("BTC-USD.csv is loaded")
+    
+fig = go.Figure(
+        go.Scatter(x=df.iloc[:, 0], y=df.iloc[:, 1], mode="lines", 
+                           line=dict(color='#0079c2', width=1)))
+
+fig.update_layout(width=900, height=500, title=df.columns[1], title_x=0.5)
+    
+st.plotly_chart(fig, use_container_width = True)
+    
+

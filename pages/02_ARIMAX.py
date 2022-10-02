@@ -1,6 +1,6 @@
 ## IMPORT LIBRARIES
 import streamlit as st
-from sidebar import mysidebar
+# from sidebar import mysidebar
 
 
 ## -------------------------------------------------------------------------
@@ -11,12 +11,12 @@ from sidebar import mysidebar
 st.set_page_config(layout="wide", page_title='Forecasting Time Series Data')
 
 ## GET STYLE GUIDES
-with open ("style.css" ) as css:
-        st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
-        st.write(f'<style>{css.read()}</style>', unsafe_allow_html=True)
+# with open ("style.css" ) as css:
+#         st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
+#         st.write(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 ## SET SIDEBAR
-mysidebar()
+# mysidebar()
 
 
 ## -------------------------------------------------------------------------
@@ -98,6 +98,15 @@ with st.expander('Read More'):
     st.write('The idea is the the exogenous variable can really be anything as long as \
               we have the data available, they are not impacted by the dependent variable \
               (the thing we are predicting).')
+      
+    st.subheader('What exactly are Exogenous Variables?')           
+    st.write('TYou might be thinking, okay - I understand exogenous or explanatory \
+             variables but what do they actually do. Exogenous factors are still \
+             technically indirectly modeled in the historical model forecast even \
+             if they are not included due to their impact on the dependent (endogenous) \
+             variable - however, including them directly in SARIMAX and ARIMAX model \
+             allows the relationship between exogenous and endogenous to be discovered \
+             much quicker rather than discovering the relationship through lagging terms.')        
                                           
 st.markdown('---')
 
