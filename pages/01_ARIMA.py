@@ -43,7 +43,6 @@ import pandas as pd
 
 import plotly.graph_objects as go
 
-from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
 
 ## -------------------------------------------------------------------------
@@ -443,7 +442,6 @@ with cf2:
 ## -------------------------------------------------------------------------
 from statsmodels.stats.diagnostic import het_breuschpagan
 from sklearn.linear_model import LinearRegression
-from statsmodels.formula.api import ols
 
 # Convert metric into a 2D array - required input for Bruesh-Pagan Test
 def test_model(col):
@@ -543,8 +541,6 @@ with he2:
 ## -------------------------------------------------------------------------
 ##  TRAIN TEST SPLIT
 ## ------------------------------------------------------------------------- 
-from sklearn.model_selection import TimeSeriesSplit
-
 X = df['Date']
 y = df['Metric']
 
@@ -570,7 +566,6 @@ y_train, y_test = y[0:train_size], y[train_size:]
 from statsmodels.tsa.arima.model import ARIMA
 import statsmodels.api as sm
 from sklearn.metrics import mean_squared_error
-import time
 
 import warnings
 from math import sqrt
@@ -578,8 +573,6 @@ warnings.filterwarnings("ignore")
 
 st.markdown('---')
 st.subheader('Model Selection and Fitting')
-
-
 
 best_score, best_cfg = float("inf"), None
 
@@ -643,7 +636,6 @@ q = best_cfg[2]
 ##  SIMULATE ARIMA MODEL
 ## ------------------------------------------------------------------------- 
 import scipy.stats as stat
-import matplotlib.pyplot as plt
 import numpy as np
 
 bam = ARIMA(endog = np.array(df['Metric']), dates=np.array(df.index), order = best_cfg)
@@ -826,10 +818,4 @@ st.download_button(
    "text/csv",
    key='download-csv'
 )
-
-
-
-
-
-
 
