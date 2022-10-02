@@ -277,6 +277,7 @@ df1, df2, cf1, cf2 = st.columns([1.9,1.9, 3.1,3.1])
 ##  DICKEY-FULLER TESTS
 ## -------------------------------------------------------------------------
 from itertools import islice   
+from statsmodels.tsa.stattools import adfuller
 
 
 def ADF_Stationarity_Test(timeseries):
