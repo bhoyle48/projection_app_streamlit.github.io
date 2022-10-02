@@ -87,7 +87,7 @@ uploaded_file = st.file_uploader("", type='csv')
 # If there is not a file uploaded
 if uploaded_file is not None:
     if 'load_csv' is st.session_state:
-        df = pd.read_csv('/sample-data/BTC-USD.csv')
+        df = pd.read_csv('sample-data/BTC-USD.csv')
         df = st.session_state.load_csv
         st.write(uploaded_file.name + " is loaded")
     else:
@@ -95,7 +95,7 @@ if uploaded_file is not None:
         st.session_state.load_csv = df
         st.write(uploaded_file.name + " is loaded")
 else:
-    df = pd.read_csv('/sample-data/BTC-USD.csv')
+    df = pd.read_csv('sample-data/BTC-USD.csv')
     st.session_state.load_csv = df 
     st.write("BTC-USD.csv is loaded")
     
