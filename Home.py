@@ -3,7 +3,7 @@ import streamlit as st
 import os
 
 os.chdir('/Users/Benjamin/Documents/GitHub/forecasting') 
-# from sidebar import mysidebar
+from sidebar import mysidebar
 
 
 ## -------------------------------------------------------------------------
@@ -64,11 +64,8 @@ st.markdown('---')
 ##  Imports
 ## ------------------------------------------------------------------------- 
 import pandas as pd
-import numpy as np
 
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-
 
 
 ## -------------------------------------------------------------------------
